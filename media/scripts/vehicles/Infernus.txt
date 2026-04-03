@@ -1,0 +1,781 @@
+module Base
+{
+	model InfernusbodyBase
+	{
+		mesh = vehicles/Infernus|Body,
+		shader = damn_vehicle_shader,
+		scale = 1,
+	}
+	model Infernus_wheelfl
+	{
+		mesh = vehicles/Infernus|wheel,
+		texture = Vehicles/rim,
+		shader = basicEffect,
+		scale = 1,
+	}
+	model Infernus_wheelfr
+	{
+		mesh = vehicles/Infernus|wheel,
+		texture = Vehicles/rim,
+		shader = basicEffect,
+		scale = 1,
+	}
+	model Infernus_wheelrl
+	{
+		mesh = vehicles/Infernus|wheel,
+		texture = Vehicles/rim,
+		shader = basicEffect,
+		scale = 1,
+	}
+	model Infernus_wheelrr
+	{
+		mesh = vehicles/Infernus|wheel,
+		texture = Vehicles/rim,
+		shader = basicEffect,
+		scale = 1,
+	}
+	model InfernusinteriorBase
+	{
+		mesh = vehicles/Infernus|Int,
+		texture = Vehicles/infernus,
+		shader = basicEffect,
+		scale = 1,
+	}
+	model InfernusbodyBase_front_left_door
+	{
+		mesh = vehicles/Infernus|FLDOOR,
+		shader = damn_vehicle_shader,
+		static = FALSE,
+                invertX = FALSE,
+		scale = 1,
+                boneweight = fldoor 1.0,
+	}
+	model InfernusbodyBase_front_right_door
+	{
+		mesh = vehicles/Infernus|Doorfr,
+		shader = damn_vehicle_shader,
+		static = FALSE,
+                invertX = FALSE,
+		scale = 1,
+                boneweight = frdoor 1.0,
+	}
+	model Infernus_SeatLeft
+	{
+		mesh = vehicles/Infernus|flseat,
+		texture = Vehicles/infernus,
+		shader = basicEffect,
+		invertX = FALSE,
+		scale = 1,
+	}
+	model Infernus_SeatRight
+	{
+		mesh = vehicles/Infernus|frseat,
+		texture = Vehicles/infernus,
+		shader = basicEffect,
+		invertX = FALSE,
+		scale = 1,
+	}
+	model InfernusbodyBase_windshield
+	{
+		mesh = vehicles/Infernus|windshield,
+		shader = vehicle,
+		scale = 1,
+	}
+	model InfernusBase_flwindow
+	{
+		mesh = vehicles/Infernus|flwindow,
+		shader = vehicle,
+		static = FALSE,
+		scale = 1,
+		boneWeight = fldoor 1.0,
+	}
+	model InfernusBase_frwindow
+	{
+		mesh = vehicles/Infernus|window_fr,
+		shader = vehicle,
+		static = FALSE,
+		scale = 1,
+		boneWeight = frdoor 1.0,
+	}
+	model InfernusBase_rearwindow
+	{
+		mesh = vehicles/Infernus|rearwindow,
+		shader = vehicle,
+		scale = 1,
+	}
+	model InfernusbodyBase_hood
+	{
+		mesh = vehicles/Infernus|Hood,
+		shader = vehicle,
+		static = FALSE,
+                invertX = FALSE,
+		scale = 1,
+                boneweight = hood 1.0,
+	}
+	vehicle Infernus
+	{
+		mechanicType = 3,
+		offRoadEfficiency = 1.0,
+		engineRepairLevel = 5,
+		playerDamageProtection = 1.0,
+		engineRPMType = firebird,
+
+		model
+		{
+			file = InfernusbodyBase,
+			scale = 1.1900,
+			offset = 0.0000 0.2269 0.0000,
+		}
+
+		skin
+		{
+			texture = Vehicles/infernus,
+		}
+
+		textureMask = Vehicles/Mask,
+		textureLights = Vehicles/lights,
+		textureDamage1Overlay = Vehicles/blood,
+		textureDamage2Overlay = Vehicles/blood,
+		textureDamage1Shell = Vehicles/damage1,
+		textureDamage2Shell = Vehicles/damage2,
+		textureRust = Vehicles/null,
+
+		sound
+		{
+			engine = VehicleEngineSportsCar,
+			engineStart = VehicleEngineSportsCar,
+			engineTurnOff = VehicleEngineSportsCar,
+			horn = vehicle_horn1,
+			ignitionFail = VehicleIgnitionFailSUV,
+		}
+
+		extents = 1.3613 0.7563 3.3613,
+		mass = 600,
+		physicsChassisShape = 1.3613 0.7563 3.3613,
+		centerOfMassOffset = -0.0504 0.4790 -0.0084,
+		shadowExtents = 1.3440 3.3564,
+		shadowOffset = -0.0423 0.0027,
+		engineForce = 5500,
+		engineQuality = 90,
+		engineLoudness = 90,
+		stoppingMovementForce = 2.0f,
+		maxSpeed = 160f,
+		gearRatioCount = 5,
+		gearRatioR = 3.5,
+		gearRatio1 = 1.11,
+		gearRatio2 = 2.50,
+		gearRatio3 = 1.65,
+		gearRatio4 = 1.25,
+		gearRatio5 = 0.80,
+		brakingForce = 50,
+		rollInfluence = 0.30f,
+		steeringIncrement = 0.04,
+		steeringClamp = 0.25,
+		suspensionStiffness = 40,
+		suspensionCompression = 3.83,
+		suspensionDamping = 2.5,
+		maxSuspensionTravelCm = 20,
+		suspensionRestLength = 0.2f,
+		wheelFriction = 2.5f,
+		frontEndHealth = 220,
+		rearEndHealth = 220,
+		seats = 2,
+
+		wheel FrontLeft
+		{
+			front = true,
+			offset = 0.5462 -0.0420 0.9580,
+			radius = 0.15f,
+			width = 0.2f,
+		}
+
+		wheel FrontRight
+		{
+			front = true,
+			offset = -0.6471 -0.0420 0.9580,
+			radius = 0.15f,
+			width = 0.2f,
+		}
+
+		wheel RearLeft
+		{
+			front = false,
+			offset = 0.5462 -0.0420 -1.1345,
+			radius = 0.15f,
+			width = 0.2f,
+		}
+
+		wheel RearRight
+		{
+			front = false,
+			offset = -0.6471 -0.0420 -1.1345,
+			radius = 0.15f,
+			width = 0.2f,
+		}
+
+		template = PassengerSeat2,
+
+		passenger FrontLeft
+		{
+			showPassenger = true,
+			hasRoof = true,
+
+			position inside
+			{
+				offset = 0.2269 0.0252 -0.1008,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+
+			position outside
+			{
+				offset = 0.8908 -0.1513 0.0084,
+				rotate = 0.0000 0.0000 0.0000,
+				area = SeatFrontLeft,
+			}
+		}
+
+		passenger FrontRight
+		{
+			showPassenger = true,
+			hasRoof = true,
+
+			position inside
+			{
+				offset = -0.2269 0.0252 -0.1008,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+
+			position outside
+			{
+				offset = -0.9664 -0.1513 0.0084,
+				rotate = 0.0000 0.0000 0.0000,
+				area = SeatFrontRight,
+			}
+		}
+
+		area Engine
+		{
+			xywh = -0.0588 1.9328 1.1933 0.4370,
+		}
+
+		area SeatFrontLeft
+		{
+			xywh = 0.8824 0.0252 0.4706 0.9580,
+		}
+
+		area SeatFrontRight
+		{
+			xywh = -0.9832 0.0252 0.4706 1.0924,
+		}
+
+		area GasTank
+		{
+			xywh = -0.9832 -0.9832 0.4706 0.4706,
+		}
+
+		area TireFrontLeft
+		{
+			xywh = 0.8908 0.9916 0.4706 0.4706,
+		}
+
+		area TireFrontRight
+		{
+			xywh = -0.9832 1.0168 0.4706 0.4706,
+		}
+
+		area TireRearLeft
+		{
+			xywh = 0.8739 -0.9748 0.4706 0.4706,
+		}
+
+		area TireRearRight
+		{
+			xywh = -0.9832 -0.9832 0.4706 0.4706,
+		}
+
+		area TruckBed
+		{
+			xywh = 0.0000 -1.9160 1.1429 0.4538,
+		}
+
+		template = Seat/part/SeatFrontLeft,
+		template = Seat/part/SeatFrontRight,
+
+		part Seat*
+		{
+			table install
+			{
+				skills = Mechanics:2,
+				recipes = Intermediate Mechanics,
+			}
+
+			table uninstall
+			{
+				skills = Mechanics:2,
+				recipes = Intermediate Mechanics,
+			}
+		}
+
+		part SeatFrontLeft
+		{
+			itemType = Base.ZILSeatLeft,
+
+			model SeatFrontLeft
+			{
+				file = Infernus_SeatLeft,
+				offset = 0.0000 0.0000 0.0000,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+
+			table install
+			{
+				area = SeatFrontLeft,
+			}
+
+			table uninstall
+			{
+				area = SeatFrontLeft,
+			}
+		}
+
+		part SeatFrontRight
+		{
+			itemType = Base.ZILSeatLeft,
+
+			model Default
+			{
+				file = Infernus_SeatRight,
+				offset = 0.0000 0.0000 0.0000,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+
+			table install
+			{
+				area = SeatFrontRight,
+			}
+
+			table uninstall
+			{
+				area = SeatFrontRight,
+			}
+		}
+
+		part GloveBox
+		{
+			model InteriorZIL4
+			{
+				file = InfernusinteriorBase,
+				rotate = 0.0000 0.0000 0.0000,
+				scale = 1.0,
+				offset = 0.0000 0.0000 0.0000,
+			}
+
+			area = SeatFrontRight,
+			itemType = Base.GloveBox,
+			mechanicRequireKey = true,
+
+			container
+			{
+				capacity = 7,
+				test = Vehicles.ContainerAccess.GloveBox,
+			}
+
+			lua
+			{
+				create = Vehicles.Create.Default,
+			}
+		}
+
+		template = GasTank,
+		template = Battery,
+		template = Engine,
+		template = Muffler,
+		template = EngineDoor,
+		template = EngineDoor,
+
+		part EngineDoor
+		{
+			itemType = Base.ZILEngineDoor,
+
+			table install
+			{
+				recipes = Classic Mechanics,
+			}
+
+			table uninstall
+			{
+				recipes = Classic Mechanics,
+			}
+
+			model Default
+			{
+				file = InfernusbodyBase_hood,
+				offset = 0.0000 0.0000 0.0000,
+				rotate = 90.0000 0.0000 0.0000,
+			}
+
+			anim Close
+			{
+				anim = ArmatureAction,
+				reverse = TRUE,
+				rate = 1.0,
+			}
+
+			anim Open
+			{
+				anim = ArmatureAction,
+				rate = 1.0,
+			}
+
+			anim Closed
+			{
+				anim = ArmatureAction,
+				animate = FALSE,
+			}
+
+			anim Opened
+			{
+				anim = ArmatureAction,
+				reverse = TRUE,
+				animate = FALSE,
+			}
+		}
+
+		part Heater
+		{
+			category = engine,
+
+			lua
+			{
+				update = Vehicles.Update.Heater,
+			}
+		}
+
+		part PassengerCompartment
+		{
+			category = nodisplay,
+
+			lua
+			{
+				update = Vehicles.Update.PassengerCompartment,
+			}
+		}
+
+		template = Windshield/part/Windshield,
+		template = Windshield/part/WindshieldRear,
+
+		part Windshield
+		{
+			itemType = Base.ZILWindshield,
+			category = bodywork,
+
+			model Default
+			{
+				file = InfernusbodyBase_windshield,
+				offset = 0.0000 0.0000 0.0000,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+		}
+
+		part WindshieldRear
+		{
+			itemType = Base.ZILWindshieldRear,
+			category = bodywork,
+
+			model Default
+			{
+				file = InfernusBase_rearwindow,
+				offset = 0.0000 0.0000 0.0000,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+
+			window
+			{
+				openable = false,
+			}
+		}
+
+		template = Window/part/WindowFrontLeft,
+		template = Window/part/WindowFrontRight,
+
+		part Window*
+		{
+			table install
+			{
+				recipes = Intermediate Mechanics,
+			}
+
+			table uninstall
+			{
+				recipes = Intermediate Mechanics,
+			}
+		}
+
+		part WindowFrontLeft
+		{
+			itemType = Base.ZILWindow,
+
+			model Default
+			{
+				file = InfernusBase_flwindow,
+				rotate = 90.0000 0.0000 0.0000,
+				offset = 0.0000 0.0000 0.0000,
+			}
+
+			anim ClosedToOpen
+			{
+				anim = ArmatureAction,
+				animate = FALSE,
+				rate = 0.1,
+			}
+
+			table install
+			{
+				requireInstalled = DoorFrontLeft,
+			}
+		}
+
+		part WindowFrontRight
+		{
+			itemType = Base.ZILWindow,
+
+			model Default
+			{
+				file = InfernusBase_frwindow,
+				rotate = 90.0000 0.0000 0.0000,
+				offset = 0.0000 0.0000 0.0000,
+			}
+
+			anim ClosedToOpen
+			{
+				anim = ArmatureAction,
+				animate = FALSE,
+				rate = 0.1,
+			}
+
+			table install
+			{
+				requireInstalled = DoorFrontRight,
+			}
+		}
+
+		template = Door/part/DoorFrontLeft,
+		template = Door/part/DoorFrontRight,
+
+		part Door*
+		{
+			table install
+			{
+				recipes = Intermediate Mechanics,
+			}
+
+			table uninstall
+			{
+				recipes = Intermediate Mechanics,
+			}
+		}
+
+		part DoorFrontLeft
+		{
+			category = door,
+			itemType = Base.ZILLeftDoor,
+
+			model Default
+			{
+				file = InfernusbodyBase_front_left_door,
+				rotate = 90.0000 0.0000 0.0000,
+				offset = 0.0000 0.0000 0.0000,
+			}
+
+			anim Close
+			{
+				anim = ArmatureAction,
+				reverse = TRUE,
+				rate = 1.0,
+				sound = VehicleDoorCloseVan,
+			}
+
+			anim Open
+			{
+				anim = ArmatureAction,
+				rate = 1.0,
+				sound = VehicleDoorOpenVan,
+			}
+
+			anim Closed
+			{
+				anim = ArmatureAction,
+				animate = FALSE,
+			}
+
+			anim Opened
+			{
+				anim = ArmatureAction,
+				reverse = TRUE,
+				animate = FALSE,
+			}
+
+			table uninstall
+			{
+				requireUninstalled = WindowFrontLeft,
+			}
+		}
+
+		part DoorFrontRight
+		{
+			category = door,
+			itemType = Base.ZILRightDoor,
+
+			model Default
+			{
+				file = InfernusbodyBase_front_right_door,
+				rotate = 90.0000 0.0000 0.0000,
+				offset = 0.0000 0.0000 0.0000,
+			}
+
+			anim Close
+			{
+				anim = ArmatureAction,
+				reverse = TRUE,
+				rate = 1.0,
+				sound = VehicleDoorCloseVan,
+			}
+
+			anim Open
+			{
+				anim = ArmatureAction,
+				rate = 1.0,
+				sound = VehicleDoorOpenVan,
+			}
+
+			anim Closed
+			{
+				anim = ArmatureAction,
+				animate = FALSE,
+			}
+
+			anim Opened
+			{
+				anim = ArmatureAction,
+				reverse = TRUE,
+				animate = FALSE,
+			}
+
+			table uninstall
+			{
+				requireUninstalled = WindowFrontRight,
+			}
+		}
+
+		template = Tire,
+
+		part TireFrontLeft
+		{
+			itemType = Base.ZILTire,
+
+			model InflatedTirePlusWheel
+			{
+				file = Infernus_wheelfl,
+				offset = 0.0000 0.0000 0.0000,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+		}
+
+		part TireFrontRight
+		{
+			itemType = Base.ZILTire,
+
+			model InflatedTirePlusWheel
+			{
+				file = Infernus_wheelfr,
+				rotate = 0.0000 180.0000 0.0000,
+				offset = 0.0000 0.0000 0.0000,
+			}
+		}
+
+		part TireRearLeft
+		{
+			itemType = Base.ZILTire,
+
+			model InflatedTirePlusWheel
+			{
+				file = Infernus_wheelrl,
+				offset = 0.0000 0.0000 0.0000,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+		}
+
+		part TireRearRight
+		{
+			itemType = Base.ZILTire,
+
+			model InflatedTirePlusWheel
+			{
+				file = Infernus_wheelrr,
+				rotate = 0.0000 180.0000 0.0000,
+				offset = 0.0000 0.0000 0.0000,
+			}
+		}
+
+		template = Brake,
+
+		part Brake*
+		{
+			table install
+			{
+				skills = Mechanics:6,
+				recipes = Intermediate Mechanics,
+			}
+
+			table uninstall
+			{
+				skills = Mechanics:6,
+				recipes = Intermediate Mechanics,
+			}
+		}
+
+		template = Suspension,
+
+		part Suspension*
+		{
+			table install
+			{
+				skills = Mechanics:6,
+				recipes = Intermediate Mechanics,
+			}
+
+			table uninstall
+			{
+				skills = Mechanics:6,
+				recipes = Intermediate Mechanics,
+			}
+		}
+
+		template = Trunk/part/TruckBed,
+
+		part TruckBed
+		{
+			container
+			{
+				conditionAffectsCapacity = false,
+				capacity = 600,
+			}
+		}
+
+		template = TrunkDoor,
+		template = Radio,
+		template = Headlight,
+
+		attachment trailer
+		{
+			offset = 0.0000 -0.1373 -1.4692,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+
+		attachment trailerfront
+		{
+			offset = 0.0000 -0.1738 0.8647,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+}
