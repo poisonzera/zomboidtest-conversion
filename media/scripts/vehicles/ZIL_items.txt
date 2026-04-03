@@ -1,0 +1,142 @@
+module Base
+{
+
+    item ZILLeftDoor3
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight	=	14.0,
+        Type	=	Normal,
+        DisplayName	=	Infernus Left Door,
+        Icon	=	Satsuma_frontdoor,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = ZILLeftDoorWorld,
+		VehicleType =   3,
+    }
+	
+    item ZILRightDoor3
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight	=	14.0,
+        Type	=	Normal,
+        DisplayName	=	Infernus Right Door,
+        Icon	=	Satsuma_frontdoor,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = ZILRightDoorWorld,
+		VehicleType =   3,
+    }
+	
+    item ZILEngineDoor3
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight	=	14.0,
+        Type	=	Normal,
+        DisplayName	=	Infernus Hood,
+        Icon	=	Satsuma_hood,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = ZILEngineDoorWorld,
+		VehicleType =   3,
+    }
+
+	item ZILSeatLeft3
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight	=	8.0,
+        Type	=	Normal,
+        DisplayName	=	Infernus Seat,
+        Icon	=	culver_windshieldrear,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = ZILSeatLeftWorld,
+		VehicleType =   3,
+    }
+
+	item ZILSeatRight3
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight	=	8.0,
+        Type	=	Normal,
+        DisplayName	=	Infernus Right,
+        Icon	=	culver_windshieldrear,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = ZILSeatRightWorld,
+		VehicleType =   3,
+    }
+	item ZILTire3
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight	=	8.0,
+        Type	=	Normal,
+        DisplayName	=	Infernus Wheel,
+        Icon	=	culver_windshieldrear,
+        ChanceToSpawnDamaged = 20,
+        MaxCapacity = 35,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = ZILTireWorld,
+		VehicleType =   3,
+    }
+	item ZILTireRear3
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight	=	8.0,
+        Type	=	Normal,
+        DisplayName	=	ZIL 4331 Rear Wheel,
+        Icon	=	culver_windshieldrear,
+        ChanceToSpawnDamaged = 20,
+        MaxCapacity = 35,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = ZILTireRearWorld,
+		VehicleType =   3,
+    }
+	item ZILWindshield3
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight	=	8.0,
+        Type	=	Normal,
+        DisplayName	=	Infernus Windshield,
+        Icon	=	culver_windshieldrear,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = ZILWindshieldWorld,
+		VehicleType =   3,
+    }
+	item ZILWindshieldRear3
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight	=	8.0,
+        Type	=	Normal,
+        DisplayName	=	Infernus Rear Window,
+        Icon	=	culver_windshieldrear,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = ZILWindshieldRearWorld,
+		VehicleType =   3,
+    }
+	item ZILWindow3
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight	=	8.0,
+        Type	=	Normal,
+        DisplayName	=	Infernus Window,
+        Icon	=	culver_windshieldrear,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+        WorldStaticModel = ZILWindowWorld,
+		VehicleType =   3,
+    }
+
+
+}
