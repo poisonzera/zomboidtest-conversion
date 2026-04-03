@@ -1,0 +1,61 @@
+module Base
+{
+
+	model ZILLeftDoorWorld
+	{
+		mesh    = vehicles/zil_models|Doorfr,
+		texture = Vehicles/infernus,
+		scale   = 1,
+	}
+	
+	model ZILEngineDoorWorld
+	{
+		mesh    = vehicles/zil_models|Hood,
+		texture = Vehicles/infernus,
+		scale   = 1,
+	}
+	model ZILRightDoorWorld
+	{
+		mesh    = vehicles/zil_models|Doorfr,
+		texture = Vehicles/infernus,
+		scale   = 1,
+	}
+	model ZILSeatLeftWorld
+	{
+		mesh    = vehicles/zil_models|frseat,
+		texture = Vehicles/infernus,
+		scale   = 1,
+	}
+	model ZILSeatRightWorld
+	{
+		mesh    = vehicles/zil_models|frseat,
+		texture = Vehicles/infernus,
+		scale   = 1,
+	}
+	model ZILTireWorld
+	{
+		mesh    = vehicles/zil_models|wheel,
+		texture = Vehicles/rim,
+		scale   = 1,
+	}
+	model ZILWindshieldWorld
+	{
+		mesh    = vehicles/zil_models|windshield,
+		texture = Vehicles/infernus,
+		scale   = 1,
+	}
+	model ZILWindshieldRearWorld
+	{
+		mesh    = vehicles/zil_models|rearwindow,
+		texture = Vehicles/infernus,
+		scale   = 1,
+	}
+	model ZILWindowWorld
+	{
+		mesh    = vehicles/zil_models|window_fr,
+		texture = Vehicles/infernus,
+		scale   = 1,
+	}
+
+
+}
